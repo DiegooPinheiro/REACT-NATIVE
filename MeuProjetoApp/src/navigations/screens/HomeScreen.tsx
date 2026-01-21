@@ -13,7 +13,7 @@ export default function HomeScreen({navigation}: {navigation: any}) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Bem-vindo ao Meu Projeto App!</Text>
-      <Text style={styles.text}>Escolha uma opção abaixo:</Text>
+      <Text style={styles.text}>Escolha uma opção abaixo:.</Text>
       <Button
         title="Ir para Detalhes"
         onPress={() => navigation.navigate('Details')}
