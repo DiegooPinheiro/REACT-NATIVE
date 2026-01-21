@@ -2,6 +2,14 @@ import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import { useEffect, useState } from 'react';
 
 export default function RegisterScreen({navigation}: {navigation: any}) {
+
+    useEffect(() => {
+        console.log('RegisterScreen montado');
+        return () => {
+            console.log('RegisterScreen desmontado');
+        };
+    }, []);
+
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [idade, setIdade] = useState('');
