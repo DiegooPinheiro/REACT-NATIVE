@@ -1,8 +1,10 @@
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import { useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useNavigation } from '@react-navigation/native';
 
 export default function RegisterScreen() {
+  const navigation = useNavigation<any>();
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [idade, setIdade] = useState('');
@@ -168,7 +170,7 @@ export default function RegisterScreen() {
         <Button
           title="Ver Usuários Salvos"
           color="blue"
-          onPress={() => carregarUsuarios()}
+          onPress={() => navigation.navigate('List')}
         />
       </View>
     </View>
